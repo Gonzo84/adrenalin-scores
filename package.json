@@ -1,5 +1,5 @@
 {
-  "name": "AdrenalinScores",
+  "name": "adrenalin-scores",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -20,10 +20,13 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
-    "@ionic-native/core": "~4.17.0",
-    "@ionic-native/splash-screen": "~4.17.0",
-    "@ionic-native/status-bar": "~4.17.0",
+    "@ionic-native/core": "4.17.0",
+    "@ionic-native/splash-screen": "4.17.0",
+    "@ionic-native/status-bar": "4.17.0",
     "@ionic/storage": "2.2.0",
+    "@ngx-translate/core": "11.0.1",
+    "@ngx-translate/http-loader": "4.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -32,7 +35,12 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.1",
-    "typescript": "~2.6.2"
+    "typescript": "2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An awesome football scores app",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
+  }
 }
