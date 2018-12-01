@@ -9,7 +9,7 @@ export class SportmonksApiCallProvider {
   constructor() {
   }
 
-  public ngOnInit() {
+  public getTestApiCall() {
     const sportmonks = new SportmonksApi(Config.API_TOKEN);
     sportmonks.get('v2.0/leagues/{id}', {id: '8'}).then(function (resp) {
       //pagination info can be found in
