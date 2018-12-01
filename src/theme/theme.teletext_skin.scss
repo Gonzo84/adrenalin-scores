@@ -1,4 +1,5 @@
 .teletext_skin-theme {
+
   ion-content {
     background-color: black !important;
   }
@@ -16,14 +17,6 @@
     }
   }
 
-  .item, ion-label {
-    color: #2ac940 !important;
-    font-family: 'TIFAX Alpha', sans-serif !important;
-    font-size: 15px;
-    text-transform: uppercase;
-    background-color: black !important;
-  }
-
   ion-navbar .toolbar-background {
     background-color: black !important;
     color: #2ac940 !important;
@@ -38,10 +31,22 @@
     }
 
     .title {
-      color: #2ac940 !important;
+      color: #96fdfe !important;
       font-family: 'TIFAX Alpha', sans-serif !important;
       text-transform: uppercase;
     }
+  }
+
+  ion-item .item-inner {
+    border-bottom: none !important;
+  }
+
+  .item, ion-label {
+    color: #96fdfe !important;
+    font-family: 'TIFAX Alpha', sans-serif !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black !important;
   }
 
   .toolbar-title {
@@ -55,8 +60,12 @@
     background-color: black !important;
   }
 
-  .back-button-icon, .select-icon-inner{
-    color: #2ac940 !important;
+  .select-icon-inner {
+    color: #96fdfe !important;
   }
 
+  .back-button-icon {
+    color: #2ac940 !important;
+  }
 }
+
