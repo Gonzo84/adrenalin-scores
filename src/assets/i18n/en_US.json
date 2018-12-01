@@ -1,0 +1,28 @@
+{
+  "AUTHENTICATION": {
+    "btnText": "Bring it on",
+    "disclaimer": "Let us see who are we dealing with",
+    "placeholder": "Username",
+    "title": "Introduce yourself"
+  },
+  "BOOT_ROOM": {
+    "changeLanguage": "Chang language",
+    "changeSkins": "Change skins",
+    "title" : "Boot room"
+  },
+  "CHANGE_SKIN": {
+    "skins": {
+      "champ_man_skin" : "Champ Man",
+      "grass_skin" : "Grass",
+      "teletext_skin" : "Teletext"
+    },
+    "title": "Pick a skin"
+  },
+  "LANGUAGES": {
+    "en_US": "English",
+    "sr_SR": "Serbian"
+  },
+  "LEAGUES_SELECTION": {
+    "title": "Leagues selection"
+  }
+}

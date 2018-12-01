@@ -1,0 +1,40 @@
+<ion-header [class]="activeTheme">
+
+  <ion-navbar text-center>
+    <ion-title>{{'BOOT_ROOM.title' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding
+             [class]="activeTheme">
+  <ion-item margin-bottom>
+    <ion-label>
+      {{'BOOT_ROOM.changeLanguage' | translate}}
+    </ion-label>
+    <ion-select [(ngModel)]="selectedLanguage"
+                (ionChange)="onLanguageChange($event)">
+      <ion-option *ngFor="let language of availableLanguages"
+                  value="{{language}}">
+        {{'LANGUAGES.' + language | translate}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item margin-bottom>
+    <button detail-none
+            no-padding
+            ion-item
+            icon-end
+            name="change-skin"
+            type="button"
+            (click)="openChangeSkinModal()">
+      {{'BOOT_ROOM.changeSkins' | translate}}
+      <ion-icon name="ios-arrow-forward"
+                item-end>
+      </ion-icon>
+    </button>
+  </ion-item>
+
+</ion-content>

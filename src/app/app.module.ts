@@ -3,22 +3,47 @@ import {ErrorHandler, NgModule} from '@angular/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
+import {IonicStorageModule} from '@ionic/storage';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 
-import {MyApp} from './app.component';
+//Import PAGES
+import {AuthenticationPage} from "../pages/authentication/authentication";
+import {BootRoomModal} from "../modals/boot-room/boot-room";
+import {ChangeSkinModal} from "../modals/change-skin/change-skin";
 import {HomePage} from '../pages/home/home';
+import {LeaguesSelectionPage} from "../pages/leagues-selection/leagues-selection";
+import {SuperTabsModule} from "ionic2-super-tabs";
+
+// Import CUSTOM COMPONENTS
+import {AppFabButtonComponent} from "../components/app-fab-button/app-fab-button";
+import {MyApp} from './app.component';
+import {SkinTabComponent} from "../modals/change-skin/skin-tab/skin-tab";
+
+//Import PROVIDERS
+import {LanguageSupportProvider} from '../providers/language-support/language-support';
+import {LogProvider} from '../providers/log/log';
+import {UsersDataProvider} from '../providers/users-data/users-data';
+
+
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
-export function createTranslateLoader(http) {
-  return new TranslateHttpLoader(http, './assets/translations/', '.json');
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 
 @NgModule({
   declarations: [
+    AppFabButtonComponent,
+    AuthenticationPage,
+    BootRoomModal,
+    ChangeSkinModal,
+    HomePage,
+    LeaguesSelectionPage,
     MyApp,
-    HomePage
+    SkinTabComponent
   ],
   imports: [
     BrowserModule,
@@ -30,17 +55,27 @@ export function createTranslateLoader(http) {
         deps: [HttpClient]
       }
     }),
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot(),
+    SuperTabsModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    AuthenticationPage,
+    BootRoomModal,
+    ChangeSkinModal,
+    HomePage,
+    LeaguesSelectionPage,
     MyApp,
-    HomePage
+    SkinTabComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LogProvider,
+    UsersDataProvider,
+    LanguageSupportProvider
   ]
 })
 export class AppModule {

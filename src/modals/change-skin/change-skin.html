@@ -1,0 +1,18 @@
+<ion-header [class]="activeTheme">
+  <ion-navbar text-center>
+    <ion-title>{{'CHANGE_SKIN.title'|translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content [class]="activeTheme">
+  <super-tabs [selectedTabIndex]="tabIndex">
+    <super-tab *ngFor="let skin of availableSkins"
+               [root]="tab"
+               title="{{'CHANGE_SKIN.skins.' +skin | translate }}"
+               [rootParams]="{skin: skin}">
+    </super-tab>
+  </super-tabs>
+
+</ion-content>

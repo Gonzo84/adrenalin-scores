@@ -1,0 +1,25 @@
+import {Component, OnInit} from '@angular/core';
+import {Events, NavParams} from "ionic-angular";
+
+import Topics from "../../../TOPICS";
+
+@Component({
+  selector: 'skin-tab',
+  templateUrl: 'skin-tab.html',
+})
+export class SkinTabComponent implements OnInit {
+
+  public skinClass: string = '';
+
+  constructor(private navParams: NavParams,
+              private events: Events) {
+  }
+
+  public ngOnInit(): void {
+    this.skinClass = this.navParams.get('skin');
+  }
+
+  public onSkinSelect() {
+    this.events.publish(Topics.skinSelected, this.skinClass);
+  }
+}

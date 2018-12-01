@@ -1,0 +1,28 @@
+{
+  "AUTHENTICATION": {
+    "btnText": "Igraaa",
+    "disclaimer": "Hajde da vidimo s kim imamo posla",
+    "placeholder": "Korisnicko ime",
+    "title": "Predstavi se"
+  },
+  "BOOT_ROOM": {
+    "changeLanguage": "Promeni jezik",
+    "changeSkins": "Promeni izgled",
+    "title" : "Svlacionica"
+  },
+  "CHANGE_SKIN": {
+    "skins": {
+      "champ_man_skin" : "Champ Man",
+      "grass_skin" : "Grass",
+      "teletext_skin" : "Teletext"
+    },
+    "title": "Izaberi izgled"
+  },
+  "LANGUAGES": {
+    "en_US": "Engleski",
+    "sr_SR": "Srpski"
+  },
+  "LEAGUES_SELECTION": {
+    "title": "Izaberi ligu"
+  }
+}

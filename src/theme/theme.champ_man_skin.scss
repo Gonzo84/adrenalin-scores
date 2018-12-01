@@ -1,0 +1,34 @@
+.champ_man_skin-theme {
+  color: #2c1774 !important;
+  font-family: 'Toyota MR2 Regular', serif;
+  font-size: 20px;
+
+  ion-content {
+    background-image: url('/../assets/imgs/champ_man_background.png');
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  ion-label {
+    color: #2c1774 !important;
+    font-family: 'Toyota MR2 Regular', serif;
+    font-size: 20px;
+  }
+
+  button.item {
+      background-color: transparent !important;
+    .item-inner {
+      border-bottom: none !important;
+    }
+  }
+
+  ion-item.item {
+    color: #fff !important;
+    background-color: rgba(128, 130, 134, 0.3);
+  }
+
+  .item-inner{
+    border-bottom: none !important;
+  }
+}

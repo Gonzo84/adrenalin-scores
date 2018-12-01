@@ -1,0 +1,19 @@
+skin-tab {
+  .grass_skin {
+    background-image: url('../../../assets/imgs/grass_skin.png');
+  }
+
+  .teletext_skin {
+    background-image: url('../../../assets/imgs/teletext_skin.png');
+  }
+
+  .champ_man_skin {
+    background-image: url('../../../assets/imgs/champ_man_skin.png');
+  }
+  ion-content {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

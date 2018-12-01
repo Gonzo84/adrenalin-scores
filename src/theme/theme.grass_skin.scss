@@ -1,0 +1,56 @@
+.grass_skin-theme {
+
+  ion-content {
+    background-color: #09cc5c !important;
+  }
+
+  button {
+    .item-inner {
+      border-bottom: none !important;
+    }
+  }
+
+  .back-button {
+    color: #fff;
+  }
+
+  .select-md .select-icon .select-icon-inner{
+    color: #fff !important;
+  }
+
+  .item, ion-label {
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+    background-color: #09cc5c !important;
+  }
+
+  ion-navbar .toolbar-background {
+    background-color: #09cc5c !important;
+    color: #fff;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+  }
+
+  super-tabs {
+    .toolbar-background {
+      background-color: #09cc5c !important;
+    }
+
+    .title {
+      color: #fff !important;
+      font-family: 'Montserrat SemiBold', serif;
+      font-size: 15px;
+    }
+  }
+
+  .toolbar-title {
+    color: #fff;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+  }
+
+  .header .toolbar-background {
+    background-color: #09cc5c;
+  }
+}

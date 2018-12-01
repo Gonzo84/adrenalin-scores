@@ -5,6 +5,7 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
+    "browser": "ionic-app-scripts serve -p 8300 --sourceMap source-map --iscordovaserve --wwwDir platforms/browser/www/ --buildDir platforms/browser/www/build",
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -24,10 +25,12 @@
     "@ionic-native/splash-screen": "4.17.0",
     "@ionic-native/status-bar": "4.17.0",
     "@ionic/storage": "2.2.0",
-    "@ngx-translate/core": "11.0.1",
+    "@ngx-translate/core": "9.1.1",
     "@ngx-translate/http-loader": "4.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-sqlite-storage": "2.5.2",
     "ionic-angular": "3.9.2",
+    "ionic2-super-tabs": "5.0.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sportmonks": "^1.2.0",
@@ -41,7 +44,8 @@
   "description": "An awesome football scores app",
   "cordova": {
     "plugins": {
-      "cordova-plugin-splashscreen": {}
+      "cordova-plugin-splashscreen": {},
+      "cordova-sqlite-storage": {}
     }
   }
 }
