@@ -1,4 +1,12 @@
 .grass_skin-theme {
+  color: #fff !important;
+  font-family: 'Montserrat SemiBold', serif;
+  font-size: 20px;
+  background-color: #09cc5c !important;
+
+  .autentication-disclaimer {
+    color: #fff !important;
+  }
 
   ion-content {
     background-color: #09cc5c !important;
@@ -10,11 +18,26 @@
     }
   }
 
+  ion-input .text-input {
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+    background-color: #09cc5c !important;
+  }
+
+  ion-footer button {
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+    background-color: #09cc5c !important;
+  }
+
+
   .back-button {
     color: #fff;
   }
 
-  .select-md .select-icon .select-icon-inner{
+  .select-md .select-icon .select-icon-inner {
     color: #fff !important;
   }
 
@@ -25,7 +48,7 @@
     background-color: #09cc5c !important;
   }
 
-  ion-navbar .toolbar-background {
+  .toolbar-background {
     background-color: #09cc5c !important;
     color: #fff;
     font-family: 'Montserrat SemiBold', serif;

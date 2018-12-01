@@ -33,8 +33,9 @@ export class UsersDataProvider {
   }
 
   public setActiveTheme(val) {
-    this.theme.next(val);
-    this.storage.set('theme', val);
+    let theme = val || 'grass_skin-theme';
+    this.theme.next(theme);
+    this.storage.set('theme', theme);
     this.events.publish(Topics.themeChanged)
   }
 
