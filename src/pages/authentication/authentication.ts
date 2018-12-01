@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 
 import {LeaguesSelectionPage} from "../leagues-selection/leagues-selection";
 
@@ -11,7 +11,10 @@ import {UsersDataProvider} from "../../providers/users-data/users-data";
   templateUrl: 'authentication.html',
 })
 export class AuthenticationPage {
-
+  /**
+   * Reference on user name
+   * @type{string} userName
+   */
   public userName: string = '';
 
   constructor(public navCtrl: NavController,
@@ -19,10 +22,16 @@ export class AuthenticationPage {
               private logProvider: LogProvider) {
   }
 
-  private navigateToLeaguesSelectionPage() {
+  /**
+   * Sets LeaguesSelectionPage as a root
+   */
+  private navigateToLeaguesSelectionPage(): void {
     this.navCtrl.setRoot(LeaguesSelectionPage);
   }
 
+  /**
+   * On button click handler, saves username and navigates to LeaguesSelectionPage
+   */
   private onBtnClick() {
     this.usersDataProvider.setUserName(this.userName)
       .then(

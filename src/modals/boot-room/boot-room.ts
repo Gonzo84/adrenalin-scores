@@ -13,8 +13,15 @@ import {LanguageSupportProvider} from "../../providers/language-support/language
 })
 export class BootRoomModal extends ThemingSupport implements OnInit {
 
+  /**
+   * Array of available languages
+   * @type{string[]} availableLanguages
+   */
   public availableLanguages: string[] = [];
-
+  /**
+   *  Reference on selected language
+   * @type{string} selectedLanguage
+   */
   public selectedLanguage: string;
 
   constructor(private viewCtrl: ViewController,
@@ -25,13 +32,20 @@ export class BootRoomModal extends ThemingSupport implements OnInit {
     super(injector);
   }
 
+  /**
+   * @inheritDoc
+   */
   public async ngOnInit() {
     super.ngOnInit();
     this.selectedLanguage = await this.languageSupportProvider.getPreferredLanguage();
     this.availableLanguages = await this.languageSupportProvider.getAvailableLanguages();
   }
 
-  public onLanguageChange(lang) {
+  /**
+   * Sets new language as a default
+   * @param{string} lang
+   */
+  public onLanguageChange(lang):void {
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang)
       .subscribe(
@@ -41,10 +55,17 @@ export class BootRoomModal extends ThemingSupport implements OnInit {
 
   }
 
-  public openChangeSkinModal() {
+  /**
+   * Creates change skin modal
+   */
+  public openChangeSkinModal():void {
     this.modalCtrl.create(ChangeSkinModal).present();
   }
 
+  /**
+   * stores currently selected language
+   * @param{string} lang
+   */
   public storeLanguage(lang) {
     this.languageSupportProvider.setPreferredLanguage(lang)
   }

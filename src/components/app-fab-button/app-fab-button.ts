@@ -12,6 +12,9 @@ export class AppFabButtonComponent {
   constructor(private modalCtrl: ModalController) {
   }
 
+  /**
+   * tap handler, creates boot room modal
+   */
   public onFabButtonTap() {
     this.modalCtrl.create(BootRoomModal).present()
   }
