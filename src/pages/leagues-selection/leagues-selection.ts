@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
+import {SportmonksApiCallProvider} from "../../providers/sportmonks-api-call/sportmonks-api-call";
 
 @Component({
   selector: 'page-leagues-selection',
@@ -9,7 +10,8 @@ export class LeaguesSelectionPage {
 
   public regionsArray: any = [];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private sportmonks: SportmonksApiCallProvider) {
   }
 
 }

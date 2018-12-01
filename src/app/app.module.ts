@@ -28,6 +28,7 @@ import {UsersDataProvider} from '../providers/users-data/users-data';
 
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { SportmonksApiCallProvider } from '../providers/sportmonks-api-call/sportmonks-api-call';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -75,7 +76,8 @@ export function createTranslateLoader(http: HttpClient) {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LogProvider,
     UsersDataProvider,
-    LanguageSupportProvider
+    LanguageSupportProvider,
+    SportmonksApiCallProvider
   ]
 })
 export class AppModule {
