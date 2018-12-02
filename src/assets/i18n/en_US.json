@@ -6,23 +6,42 @@
     "title": "Introduce yourself"
   },
   "BOOT_ROOM": {
-    "changeLanguage": "Chang language",
+    "changeLanguage": "Change language",
     "changeSkins": "Change skins",
-    "title" : "Boot room"
+    "title": "Boot room"
   },
   "CHANGE_SKIN": {
     "skins": {
-      "champ_man_skin" : "Champ Man",
-      "grass_skin" : "Grass",
-      "teletext_skin" : "Teletext"
+      "champ_man_skin": "Champ Man",
+      "grass_skin": "Grass",
+      "teletext_skin": "Teletext"
     },
     "title": "Pick a skin"
   },
   "LANGUAGES": {
     "en_US": "English",
-    "sr_SR": "Serbian"
+    "sr_SR": "Serbian",
+    "es_ES": "Spanish"
+  },
+  "LEAGUES": {
+    "premierLeague": "Premier League",
+    "championship": "Championship",
+    "league1": "League One",
+    "league2": "League Two",
+    "scottishPremiership": "Premiership",
+    "scottishChampionship": "Championship ",
+    "scottishLeagueOne": "League One",
+    "scottishLeagueTwo": "League Two"
   },
   "LEAGUES_SELECTION": {
+    "letsPikSome": "Now let's pick some LEAGUES",
+    "matcheToday": "match",
+    "matchesToday": "matches",
+    "swipeToChangeRegion": "swipe to change region",
     "title": "Leagues selection"
+  },
+  "RESULTS": {
+    "allShown": "All shown, pull to refresh data",
+    "tapToRevealScores": "Tap to reveal scores"
   }
 }

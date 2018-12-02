@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <h2>{{'LEAGUES.' + leagueNameKey | translate }}</h2>
+      <h5>{{currentDate | date: "MMMM, EEEE d"}}</h5>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="onRefresh($event)">
+    <ion-refresher-content
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngIf="untached"
+       text-uppercase
+       text-center
+       margin
+       class="tapToRevealScores">
+    {{'RESULTS.tapToRevealScores' | translate}}
+  </div>
+  <ion-list *ngIf="matchArray.length">
+    <results-item *ngFor="let match of matchArray; let i = index"
+                  [data]="match"
+                  [componentIndex]="i"></results-item>
+  </ion-list>
+  <div *ngIf="allShown"
+       text-uppercase
+       text-center
+       margin
+       class="allShown">
+    {{'RESULTS.allShown' | translate}}
+  </div>
+
+  <app-fab-button></app-fab-button>
+</ion-content>

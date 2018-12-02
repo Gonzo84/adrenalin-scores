@@ -1,0 +1,15 @@
+<ion-content no-padding>
+  <ng-container *ngIf="regionData.length">
+    <ion-list>
+      <ion-list-header text-center="">
+        <h1>{{regionName}}</h1>
+        <h3>{{'LEAGUES_SELECTION.letsPikSome' | translate}}</h3>
+      </ion-list-header>
+
+      <region-tab-item *ngFor="let league of regionData"
+                       [data]="league"></region-tab-item>
+    </ion-list>
+  </ng-container>
+  <div text-right
+  class="swipeToChangeRegion">{{'LEAGUES_SELECTION.swipeToChangeRegion' | translate}}</div>
+</ion-content>

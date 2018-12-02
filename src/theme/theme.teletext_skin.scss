@@ -5,9 +5,20 @@
   font-size: 20px;
   text-transform: uppercase;
 
+  region-tab .swipeToChangeRegion{
+    color: #2ac940 !important;
+    font-family: 'TIFAX Alpha', sans-serif !important;
+    font-size: 15px;
+  }
+
   ion-content {
     background-color: black !important;
   }
+  .allShown {
+     color: #2ac940 !important;
+     font-family: 'TIFAX Alpha', sans-serif !important;
+     text-transform: uppercase;
+   }
 
   .toolbar-title {
     color: #2ac940;
@@ -52,6 +63,9 @@
     font-size: 15px;
     text-transform: uppercase;
     background-color: black !important;
+    h2{
+      margin-top: 0!important;
+    }
   }
 
   .toolbar-title {

@@ -1,0 +1,18 @@
+<ion-item no-padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-5 text-left>
+        <span *ngIf="showLocalTeamName">{{localTeamName}}</span>
+      </ion-col>
+      <ion-col col-1>
+        <span *ngIf="showLocalTeamScore">{{scores.localteam_score}}</span>
+      </ion-col>
+      <ion-col col-1>
+        <span *ngIf="showVisitorTeamScore">{{scores.visitorteam_score}}</span>
+      </ion-col>
+      <ion-col col-5 text-right>
+        <span *ngIf="showVisitorTeamName">{{visitorTeamName}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>

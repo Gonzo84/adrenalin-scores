@@ -13,22 +13,26 @@ import {BootRoomModal} from "../modals/boot-room/boot-room";
 import {ChangeSkinModal} from "../modals/change-skin/change-skin";
 import {HomePage} from '../pages/home/home';
 import {LeaguesSelectionPage} from "../pages/leagues-selection/leagues-selection";
+import {ResultsPage} from "../pages/results/results";
 import {SuperTabsModule} from "ionic2-super-tabs";
 
 // Import CUSTOM COMPONENTS
 import {AppFabButtonComponent} from "../components/app-fab-button/app-fab-button";
 import {MyApp} from './app.component';
+import {RegionTabComponent} from "../pages/leagues-selection/region-tab/region-tab";
+import {RegionTabItemComponent} from "../pages/leagues-selection/region-tab/region-tab-item/region-tab-item";
+import {ResultsItemComponent} from "../pages/results/results-item/results-item";
 import {SkinTabComponent} from "../modals/change-skin/skin-tab/skin-tab";
 
 //Import PROVIDERS
 import {LanguageSupportProvider} from '../providers/language-support/language-support';
 import {LogProvider} from '../providers/log/log';
+import {SportmonksApiCallProvider} from '../providers/sportmonks-api-call/sportmonks-api-call';
 import {UsersDataProvider} from '../providers/users-data/users-data';
 
 
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import { SportmonksApiCallProvider } from '../providers/sportmonks-api-call/sportmonks-api-call';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -44,6 +48,10 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     LeaguesSelectionPage,
     MyApp,
+    RegionTabComponent,
+    RegionTabItemComponent,
+    ResultsItemComponent,
+    ResultsPage,
     SkinTabComponent
   ],
   imports: [
@@ -68,6 +76,8 @@ export function createTranslateLoader(http: HttpClient) {
     HomePage,
     LeaguesSelectionPage,
     MyApp,
+    RegionTabComponent,
+    ResultsPage,
     SkinTabComponent
   ],
   providers: [

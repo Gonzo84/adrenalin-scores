@@ -7,7 +7,7 @@ export class LanguageSupportProvider {
    * Array of available languages
    * @type{string[]}availableLanguages
    */
-  private availableLanguages: string[] = ['en_US', 'sr_SR'];
+  private availableLanguages: string[] = ['en_US', 'sr_SR', 'es_ES'];
 
   constructor(private storage: Storage) {
   }

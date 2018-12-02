@@ -1,9 +1,7 @@
 import {Component, Injector} from '@angular/core';
-import {Events, ModalController, ViewController} from "ionic-angular";
+import { ViewController} from "ionic-angular";
 
 import {SkinTabComponent} from "./skin-tab/skin-tab";
-
-import {UsersDataProvider} from "../../providers/users-data/users-data";
 
 import Topics from '../../TOPICS';
 import {ThemingSupport} from "../../components/theming-support/theming-support";

@@ -1,0 +1,47 @@
+{
+  "AUTHENTICATION": {
+    "btnText": "Vamos",
+    "disclaimer": "Vamos a ver con quien nos enfrentamos ",
+    "placeholder": "Nombre del usuario",
+    "title": "Presentate"
+  },
+  "BOOT_ROOM": {
+    "changeLanguage": "Cambio de idioma",
+    "changeSkins": "Cambio de piel ",
+    "title": "Cuarto de entrenamiento"
+  },
+  "CHANGE_SKIN": {
+    "skins": {
+      "champ_man_skin": "Champ Man",
+      "grass_skin": "Grass",
+      "teletext_skin": "Teletext"
+    },
+    "title": "Escoge una piel"
+  },
+  "LANGUAGES": {
+    "en_US": "Ingles",
+    "sr_SR": "Serbio",
+    "es_ES": "Espanjol"
+  },
+  "LEAGUES": {
+    "premierLeague": "Premier League",
+    "championship": "Championship",
+    "league1": "League One",
+    "league2": "League Two",
+    "scottishPremiership": "Premiership",
+    "scottishChampionship": "Championship ",
+    "scottishLeagueOne": "League One",
+    "scottishLeagueTwo": "League Two"
+  },
+  "LEAGUES_SELECTION": {
+    "letsPikSome": "Ahora vamos a escoger algunas LIGAS",
+    "matcheToday": "partido",
+    "matchesToday": "partidos",
+    "swipeToChangeRegion": "deslizar para cambiar region",
+    "title": "Seleccion de ligas"
+  },
+  "RESULTS": {
+    "allShown": "Todo presentado, pulga para refrescar el datos",
+    "tapToRevealScores": "Toca para ver los resultados"
+  }
+}

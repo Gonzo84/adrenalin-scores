@@ -6,7 +6,14 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <app-fab-button></app-fab-button>
+
+  <super-tabs [selectedTabIndex]="tabIndex">
+    <super-tab *ngFor="let regionName of regions"
+               [root]="tab"
+               [rootParams]="{regionName: regionName}">
+    </super-tab>
+  </super-tabs>
+
 </ion-content>

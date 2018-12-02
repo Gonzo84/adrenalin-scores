@@ -4,8 +4,48 @@
   font-size: 20px;
   background-color: #09cc5c !important;
 
+  .swipeToChangeRegion{
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 15px;
+  }
+
+  results-item {
+    .item-inner {
+      border-bottom: none !important;
+    }
+
+  }
+
+  .tapToRevealScores {
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 20px;
+    padding-top: 20vh;
+  }
+
+  .allShown {
+    color: #fff !important;
+    font-family: 'Montserrat SemiBold', serif;
+    font-size: 10px;
+  }
+
+  ion-refresher {
+    .refresher-refreshing-text, .refresher-refreshing-icon, .refresher-pulling-icon, .refresher-pulling-text {
+
+      color: #fff !important;
+      font-family: 'Montserrat SemiBold', serif;
+      font-size: 20px;
+    }
+  }
+
+
   .autentication-disclaimer {
     color: #fff !important;
+  }
+
+  .list-header {
+    border-top: none !important;
   }
 
   ion-content {

@@ -8,21 +8,40 @@
   "BOOT_ROOM": {
     "changeLanguage": "Promeni jezik",
     "changeSkins": "Promeni izgled",
-    "title" : "Svlacionica"
+    "title": "Svlacionica"
   },
   "CHANGE_SKIN": {
     "skins": {
-      "champ_man_skin" : "Champ Man",
-      "grass_skin" : "Grass",
-      "teletext_skin" : "Teletext"
+      "champ_man_skin": "Champ Man",
+      "grass_skin": "Grass",
+      "teletext_skin": "Teletext"
     },
     "title": "Izaberi izgled"
   },
   "LANGUAGES": {
     "en_US": "Engleski",
-    "sr_SR": "Srpski"
+    "sr_SR": "Srpski",
+    "es_ES": "Spanski"
+  },
+  "LEAGUES": {
+    "premierLeague": "Premier League",
+    "championship": "Championship",
+    "league1": "League One",
+    "league2": "League Two",
+    "scottishPremiership": "Premiership",
+    "scottishChampionship": "Championship ",
+    "scottishLeagueOne": "League One",
+    "scottishLeagueTwo": "League Two"
   },
   "LEAGUES_SELECTION": {
+    "letsPikSome": "E sada izaberi LIGU",
+    "matcheToday": "utakmica",
+    "matchesToday": "utakmica",
+    "swipeToChangeRegion": "prevuci da promenis region",
     "title": "Izaberi ligu"
+  },
+  "RESULTS": {
+    "allShown": "Sve je prikazano, povuci da osvezis podatke",
+    "tapToRevealScores": "Tapni da otkrijes rezultate"
   }
 }

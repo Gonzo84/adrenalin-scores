@@ -1,0 +1,19 @@
+<ion-item no-padding>
+  <button detail-none
+          no-padding
+          ion-item
+          icon-end
+          type="button"
+          (click)="onLeagueSelect()">
+    <h2>{{'LEAGUES.' + leagueNameKey | translate }}</h2>
+    <span *ngIf="data[leagueNameKey].length > 1; else singular">
+    {{data[leagueNameKey].length}} {{'LEAGUES_SELECTION.matchesToday' | translate}}
+    </span>
+    <ng-template #singular>
+      {{data[leagueNameKey].length}} {{'LEAGUES_SELECTION.matcheToday' | translate}}
+    </ng-template>
+    <ion-icon name="ios-arrow-forward"
+              item-end>
+    </ion-icon>
+  </button>
+</ion-item>
