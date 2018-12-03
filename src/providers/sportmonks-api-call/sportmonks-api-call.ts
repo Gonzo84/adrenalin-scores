@@ -5,7 +5,6 @@ import {SportmonksApi} from "sportmonks";
 
 import Config from '../../config';
 import {LogProvider} from "../log/log";
-
 import Topics from '../../TOPICS';
 
 
@@ -13,10 +12,25 @@ import MockData from '../../data/mock-data';
 
 @Injectable()
 export class SportmonksApiCallProvider {
+  /**
+   * list of leagues ids
+   * @type{Object[]}
+   */
   public leaguesIdArray: any = [];
+  /**
+   * map of regions and their leagues
+   * @type{Object}
+   */
   public leaguesMapObject: any;
-
+  /**
+   * flag that switches between live api calls and mock data
+   * @type{boolean}
+   */
   public mockData: boolean = true;
+  /**
+   * regions data array
+   * @type{Object[]}
+   */
   public regionsDataArray: any = [{
     England: {
       premierLeague: [],
@@ -32,7 +46,10 @@ export class SportmonksApiCallProvider {
       scottishLeagueTwo: []
     }
   }];
-
+  /**
+   * list of region names
+   * @type{string[]}
+   */
   public regionNames: string[] = ['England', 'Scotland'];
 
   constructor(private http: HttpClient,
@@ -41,15 +58,30 @@ export class SportmonksApiCallProvider {
     this.setLeaguesIds();
   }
 
+  /**
+   * filters data
+   * @param {Function}resolve
+   * @param {Object}data
+   */
   private filterData(resolve, data) {
     let filteredData = data.data.filter(this.filterDataFn.bind(this));
     this.setData(filteredData, resolve);
   }
 
+  /**
+   * filter Data Fn
+   * @param{Object} match
+   */
   private filterDataFn(match) {
     return this.leaguesIdArray.includes(match.league_id.toString())
   }
 
+  /**
+   * returns league data
+   * @param {string}leagueKey
+   * @param {Object}data
+   * @return{Object}
+   */
   private getLeagueData(leagueKey, data) {
     let leagueData;
     let regionNames = this.regionNames;
@@ -64,11 +96,19 @@ export class SportmonksApiCallProvider {
     return leagueData;
   }
 
+  /**
+   * get live scores api call
+   * @return{Promise}
+   */
   public getLiveScores() {
     this.resetData();
     return new Promise(this.getLiveScoresFn.bind(this));
   }
 
+
+  /**
+   * get live scores api call function
+   */
   private getLiveScoresFn(resolve, reject) {
     if (this.mockData) {
       this.filterData(resolve, MockData);
@@ -81,14 +121,28 @@ export class SportmonksApiCallProvider {
     }
   }
 
+  /**
+   * returns  region names
+   * @return{Object}
+   */
   public getRegions() {
     return this.regionNames;
   }
 
+  /**
+   * get specific lague
+   * @param{string} league
+   */
   public getSpecificLeague(league) {
     return new Promise(this.getSpecificLeagueFn.bind(this, league))
   }
 
+  /**
+   * get specific lague function
+   * @param {string}league
+   * @param {Function}resolve
+   * @param {Function}reject
+   */
   public getSpecificLeagueFn(league, resolve, reject) {
     let leagueData;
     let item = 0;
@@ -112,6 +166,10 @@ export class SportmonksApiCallProvider {
     }
   }
 
+  /**
+   * returns specific region
+   * @param{string} regionName
+   */
   public getSpecificRegion(regionName) {
     let regionData = this.regionsDataArray.filter((region) => {
       return region.hasOwnProperty(regionName);
@@ -119,6 +177,10 @@ export class SportmonksApiCallProvider {
     return regionData[0];
   }
 
+  /**
+   * maps data
+   * @param{Object} match
+   */
   private mapData(match) {
     const leaguesMapObject = this.leaguesMapObject;
     for (var key in leaguesMapObject) {
@@ -134,6 +196,9 @@ export class SportmonksApiCallProvider {
     }
   }
 
+  /**
+   * resets data
+   */
   private resetData() {
     this.regionsDataArray = [{
       England: {
@@ -152,6 +217,11 @@ export class SportmonksApiCallProvider {
     }];
   }
 
+  /**
+   * sets data
+   * @param {Object}data
+   * @param {Function}resolve
+   */
   private setData(data, resolve) {
     data.map(this.mapData.bind(this));
     if (this.mockData) {
@@ -164,6 +234,9 @@ export class SportmonksApiCallProvider {
     }
   }
 
+  /**
+   * sets league id
+   */
   private setLeaguesIds() {
     let england = Config.leagues.England;
     let scotland = Config.leagues.Scotland;

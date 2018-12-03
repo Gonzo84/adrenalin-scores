@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Events, NavController} from 'ionic-angular';
 
+import {ResultsPage} from "../results/results";
 import {RegionTabComponent} from "./region-tab/region-tab";
 
 import {SportmonksApiCallProvider} from "../../providers/sportmonks-api-call/sportmonks-api-call";
 
 import Topics from '../../TOPICS';
-import {ResultsPage} from "../results/results";
 
 @Component({
   selector: 'page-leagues-selection',
@@ -14,6 +14,10 @@ import {ResultsPage} from "../results/results";
 })
 export class LeaguesSelectionPage implements OnInit {
 
+  /**
+   * String of available regions
+   * @type{string[]}regions
+   */
   public regions: string[] = [];
 
   /**
@@ -34,19 +38,32 @@ export class LeaguesSelectionPage implements OnInit {
     this.setRegions();
   }
 
+  /**
+   * Angular lifecycle hook
+   */
   public ngOnInit(): void {
     this.getLiveScores();
   }
 
-  public getLiveScores() {
+  /**
+   * get live scores api call
+   */
+  public getLiveScores():void {
     this.sportmonks.getLiveScores();
   }
 
-  private onLeagueSelect(league) {
+  /**
+   * League data
+   * @param {Object}league
+   */
+  private onLeagueSelect(league):void {
     this.navCtrl.push(ResultsPage, {data: league})
   }
 
-  private setRegions() {
+  /**
+   * sets regions
+   */
+  private setRegions():void {
     this.regions = this.sportmonks.getRegions();
   }
 }
